@@ -10,6 +10,19 @@ const loginHandler = () => {
     username: username.value,
     password: password.value,
   };
+
+  fetch("/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(req),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    //.then((result) => console.log(result));
+    .then(console.log)
 };
 
 loginBtn.addEventListener("click", loginHandler);
