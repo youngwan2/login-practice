@@ -1,0 +1,29 @@
+
+body{
+    background-color: aquamarine;
+}
+
+.login-form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-form .username, .password{
+    min-width: 130px;
+    height: 30px;
+    margin: 5px;
+}
+
+.login-form #pw_area label{
+    letter-spacing: 0.2px;
+}
+
+#login-btn{
+    margin-top: 1rem;
+    padding: 5px;
+    min-width: 100px;
+}
