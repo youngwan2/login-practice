@@ -16,8 +16,8 @@ app.set('views', "./src/views" ); //초기 views의 경로를 ./src/views로 지
 app.set('view engine','ejs')
 
 // 미들웨어 셋팅(등록)
-app.use(express.urlencoded({ extended: false }));
-app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(`${__dirname}/public/`));
 
  // ㄴ Router 설정
  app.use("/",home);
