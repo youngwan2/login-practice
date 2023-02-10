@@ -2,9 +2,8 @@
 
 class User {
   UserStorage = require("../models/UserStorage");
-  constructor(body, res) {
+  constructor(body) {
     this.body = body;
-    this.res = res;
   }
 
   login() {

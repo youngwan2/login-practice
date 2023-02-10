@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/home/signin.module.css" />
+  </head>
+  <body>
+    <form class="signin-form" action="#">
+      <div id="container">
+        <h1>Sign in</h1>
+        <div id="id_area">
+          <input
+            placeholder="아이디"
+            value=""
+            type="text"
+            class="username"
+            id="username"
+            name="username"
+          />
+        </div>
+        <div id="name_area">
+            <input
+              placeholder="성명"
+              value=""
+              type="text"
+              class="name"
+              id="name"
+              name="name"
+            />
+          </div>
+        <div class="pw_area">
+          <input
+            placeholder="비밀번호"
+            value=""
+            type="password"
+            class="password"
+            id="password"
+            name="password"
+          />
+        </div>
+
+          <div class="pw_area">
+            <input
+              placeholder="비밀번호 확인"
+              value=""
+              type="password"
+              class="password"
+              id="password-re"
+              name="password-re"
+            />
+          </div>
+        <button id="signin-btn">등록하기</button>
+        <p 
+          id="login_link"><a href="/login">로그인 화면으로 돌아가시겠습니까?</a></p>
+      </div>
+    </form>
+    <script src="js/home/signin.js"></script>
+  </body>
+</html>

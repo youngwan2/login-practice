@@ -9,26 +9,32 @@
   </head>
   <body>
     <form class="login-form" action="#">
+      <div id="container">
         <h1>Login</h1>
-      <div id="id_area">
-        <label for="username">username</label>
-        <input 
+        <div id="id_area">
+          <input
+            placeholder="아이디"
             value=""
-            type="text" 
-            class="username" 
+            type="text"
+            class="username"
             id="username"
-            name="username" />
-      </div>
-      <div id="pw_area">
-        <label for="password">password </label>
-        <input 
+            name="username"
+          />
+        </div>
+        <div id="pw_area">
+          <input
+            placeholder="비밀번호"
             value=""
-            type="password" 
-            class="password" 
+            type="password"
+            class="password"
             id="password"
-            name="password" />
+            name="password"
+          />
+        </div>
+        <button id="login-btn">로그인</button>
+        <p 
+          id="signin_link"><a href="/signin">회원가입 하시겠습니까?</a></p>
       </div>
-      <button id="login-btn">로그인</button>
     </form>
     <script src="js/home/login.js"></script>
   </body>

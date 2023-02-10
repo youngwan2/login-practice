@@ -11,6 +11,9 @@ const output = {
   login: (req, res) => {
     res.render("home/login");
   },
+  signin:( req,res) => {
+    res.render("home/signin");
+  }
 };
 
 const process = {
@@ -21,6 +24,9 @@ const process = {
     //유저 클래스에서 정의된 메서드가 실행되면서 로그인 인증 결과를 유저에게 반환한다.
     return res.json(user.login());
   },
+  signin:(req,res) => {
+    
+  }
 };
 
 module.exports = { output, process };
