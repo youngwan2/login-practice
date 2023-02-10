@@ -1,6 +1,8 @@
 "use strict";
 
 const UserStorage = require("../.././models/UserStorage");
+const User = require("../../models/User");
+console.log(UserStorage.users);
 
 const output = {
   home: (req, res) => {
@@ -13,21 +15,11 @@ const output = {
 
 const process = {
   login: (req, res) => {
-    const { username: id, password: pw } = req.body;
-    const users = UserStorage.getUsers("username", "password");
+    // 유저가 로그인 시 전송한 정보를 User 클래스로 전달한다.
+    const user = new User(req.body);
 
-    const response = { success: false };
-    if (users.username.includes(id)) {
-      const idx = users.username.indexOf(id);
-      if (users.password.includes(pw)) {
-        response.success = true;
-        return res.json(response);
-      }
-    }
-
-    response.success = false;
-    response.msg = "로그인에 실패 하였습니다.";
-    return res.json(response);
+    //유저 클래스에서 정의된 메서드가 실행되면서 로그인 인증 결과를 유저에게 반환한다.
+    return res.json(user.login());
   },
 };
 
