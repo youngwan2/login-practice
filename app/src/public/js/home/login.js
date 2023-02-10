@@ -22,7 +22,11 @@ const loginHandler = () => {
       return response.json();
     })
     //.then((result) => console.log(result));
-    .then(console.log)
+    .then(result => {
+      if(result.success) return location.href ='/'
+      else alert(result.msg)
+    })
+    .catch(error => console.error(error))
 };
 
 loginBtn.addEventListener("click", loginHandler);
