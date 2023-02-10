@@ -8,14 +8,18 @@ const username = document.getElementById("username"),
   signinform = document.querySelector(".signin-form");
 
 const signinHandler = () => {
+  if (!username.value) alert("아이디를 입력해주세요.");
+  if (password.value !== pwReconfirm.value) {
+    alert("비밀번호가 일치하지 않습니다.");
+  }
   const req = {
     username: username.value,
     password: password.value,
-    pwReconfirm: pwReconfirm.value,
     name: $name.value,
   };
   console.log(req);
 
+  // signin 경로로 유저가 입력한 데이터(req)를 보낸다.
   fetch("/signin", {
     method: "POST",
     headers: {

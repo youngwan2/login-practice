@@ -6,6 +6,7 @@ class UserStorage {
     password: ["dktltl11"],
     name: ["동해물", "백두산", "하느님"],
   };
+
   /// ... 매개변수 => 인자를 배열 형태의 매개변수로 바꿈.
   static getUsers(...fields) {
     const users = this.#users;
@@ -51,6 +52,11 @@ class UserStorage {
       return newUser;
     }, {});
     return userInfo;
+  }
+
+  static save(userInfo) {
+    console.log(userInfo)
+
   }
 }
 
