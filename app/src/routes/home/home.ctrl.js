@@ -17,12 +17,12 @@ const output = {
 };
 
 const process = {
-  login: (req, res) => {
+   login: async (req, res) => {
     // 유저가 로그인 시 전송한 정보를 User 클래스로 전달한다.
     const user = new User(req.body);
 
     //유저 클래스에서 정의된 메서드가 실행되면서 로그인 인증 결과를  반환한다.
-    return res.json(user.login());
+    return res.json(await user.login());
   },
   signin:(req,res) => {
     //유저로 부터 전송된 정보를 User 클래스로 전달한다. 

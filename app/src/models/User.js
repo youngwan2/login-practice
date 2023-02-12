@@ -8,13 +8,13 @@ class User {
     this.body = body;
   }
 
-  login() {
+  async login() {
     // 유저가 로그인 시 입력한 아이디와 비밀번호
     const { username: id, password: pw } = this.body;
 
     //데이터베이스에 저장된 유저의 아이디와 비밀번호
-    const { username, password } = UserStorage.getUserInfo(id);
-    console.log(username === id, password == pw);
+    const { username, password } = await UserStorage.getUserInfo(id);
+    console.log(username)
 
     if (username) {
       if (username === id && password === pw) {
